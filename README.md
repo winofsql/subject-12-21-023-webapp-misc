@@ -13,3 +13,5 @@
 - ## WEBアブリに必要で重要なテクニカル
   - ### スマホ対応とUI の標準化
     - [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)
+      - UI に使用するクラス
+        - [ボタン](https://getbootstrap.jp/docs/5.3/components/buttons/)
