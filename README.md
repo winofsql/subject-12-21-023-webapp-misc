@@ -9,3 +9,6 @@
   - ### 雛型を作成する
 
 - ### [subject-231220](https://github.com/winofsql/subject-231220)
+
+- ## WEBアブリに必要で重要なテクニカル
+  - ### スマホ対応
