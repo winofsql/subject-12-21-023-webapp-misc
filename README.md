@@ -80,3 +80,33 @@
       }
     }   
     ```  
+
+  - ### Ajax( jQuery )
+    - GET
+      ```javascript
+      $.ajax({
+        url: "syain.php",
+        cache: false,
+        data: { "type": "get" }
+      })
+      .done(function( data, textStatus ){
+        console.log( "status:" + textStatus );
+        console.log( "data:" + JSON.stringify(data, null, "    ") );
+      
+        $("#message").text( data.length  + "件のデータがあります" );
+        loadTable( data );
+      })
+      // 失敗
+      .fail(function(jqXHR, textStatus, errorThrown ){
+        console.log( "status:" + textStatus );
+        console.log( "errorThrown:" + errorThrown );
+      
+        // エラーメッセージを表示
+        alert("システムエラーです");
+      
+      })
+      // 常に実行
+      .always(function() {
+      })
+      ;
+      ```
