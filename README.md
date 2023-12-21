@@ -45,3 +45,30 @@
           }
       }       
       ```
+
+ - ### IFRAME を画面下部にフィットさせる CSS と PHP の埋め込み
+   ```css
+  /* PC 用 */
+  @media screen and ( min-width:480px ) {
+  
+    #bbs {
+        height: <?= $view_head_height ?>px;
+    }
+    
+    #extend {
+        height: calc( 100% - <?= $view_head_height ?>px - 2px );
+    }
+  
+  }
+  /* スマホ 用 */
+  @media screen and ( max-width:479px ) {
+  
+    #bbs {
+        height: <?= $view_head_height + 40 ?>px;
+    }
+    
+    #extend {
+        height: calc( 100% - <?= $view_head_height - 40 ?>px - 2px );
+    }
+  }   
+   ```  
