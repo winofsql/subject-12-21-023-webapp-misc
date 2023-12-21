@@ -11,4 +11,5 @@
 - ### [subject-231220](https://github.com/winofsql/subject-231220)
 
 - ## WEBアブリに必要で重要なテクニカル
-  - ### スマホ対応
+  - ### スマホ対応とUI の標準化
+    - [Bootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)
