@@ -256,7 +256,7 @@
       });
       ```
         
-    - クリップボードにテキイトをコピー
+    - クリップボードにテキストをコピー
       - clipboard.js ( 外部ライブラリ )
         ```javascript
         var clipbpardText = "";
