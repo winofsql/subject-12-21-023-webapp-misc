@@ -112,7 +112,7 @@
       ```
 
     - POST
-      ```
+      ```javascript
       $.ajax({
           url: "./upload.php",
           type: "POST",
@@ -137,7 +137,7 @@
       ;      
       ```
       - FormData
-        ```
+        ```javascript
         var formData = new FormData();
 
         // 画像データサイズの制限
