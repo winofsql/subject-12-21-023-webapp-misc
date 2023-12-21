@@ -20,15 +20,6 @@
           ![image](https://github.com/winofsql/subject-231221/assets/1501327/29f14559-eecc-47a9-a97b-1aa5ede9cd88)
     - 🔴 スマホ対応は CSS で行う
       ```css
-      /* IFRAME で表示する */
-      html,body {
-          height: 100%;
-      }
-      
-      body {
-          margin: 0;
-      }
-
       /* PC 用 */
       @media screen and ( min-width:480px ) {
       
@@ -57,6 +48,14 @@
 
  - ### IFRAME を画面下部にフィットさせる CSS と PHP の埋め込み
     ```css
+    /* IFRAME で表示する */
+    html,body {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+    }
     /* PC 用 */
     @media screen and ( min-width:480px ) {
     
