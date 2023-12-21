@@ -135,4 +135,25 @@
           $("#content input").prop("disabled", false);
       })
       ;      
-      ``` 
+      ```
+      - FormData
+        ```
+        var formData = new FormData();
+
+        // 画像データサイズの制限
+        formData.append("MAX_FILE_SIZE", 10000000);
+
+        var file_cnt = 0;
+        var target = $("#target").get(0);
+
+        // formData に全てのファイルを追加
+        for( i = 0; i < target.files.length; i++ ) {
+
+            formData.append("image"+(i+1), target.files[i]);
+
+            file_cnt++;
+
+        }
+        
+        formData.append("FILE_COUNT", file_cnt );
+        ``` 
