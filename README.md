@@ -305,3 +305,59 @@
         
         });
         ```
+
+    - CSV をテーブルにして表示
+      ```javascript
+      $("#action_load").on( "click", function(){
+      
+          // 既存の表示データを完全クリア
+          $("#tbl").html("");
+      
+          // FileReader は毎回作成(同時に複数のファイルを扱えない)
+          var reader = new FileReader();
+      
+          // FileReader にデータが読み込まれた時のイベント
+          var rows = "";
+          var cols = "";
+          var tr = null;
+          $(reader).on("load", function () {
+      
+              // \r を全て削除
+              var data = this.result.replace(/\r/g,"");
+      
+              // \n で行を分ける
+              rows = this.result.split("\n");
+              $.each( rows, function( idx, value ){
+                  // 空行を無視
+                  if ( value == "" ) {
+                      return;
+                  }
+                  cols = value.split(",");
+                  // 行を作成
+                  tr = $("<tr></tr>").appendTo("#tbl");
+                  $.each( cols, function( idx, value ){
+                      // TD を追加して、テキストをセット
+      
+                      switch( idx ) {
+                          case 7:
+                          case 8:
+                              // 数値項目はカンマ編集で右寄せ
+                              $("<td></td>").appendTo(tr)
+                                  .text(value)
+                                  .css({"text-align": "right" });
+                              break;
+      
+                          default:
+                              $("<td></td>").appendTo(tr)
+                                  .text(value);
+                      }
+      
+                  } )
+              } )
+          });
+      
+          reader.readAsText($("#target").get(0).files[0],"shift_jis");
+          // reader.readAsText($("#target").get(0).files[0],"utf-8");
+      
+      });
+      ```
