@@ -184,3 +184,15 @@
             reader.readAsText(file);
         }        
         ```
+    - ローカルにファイルを保存する
+      - FileSaver ライブラリを使用すると簡単に実装可能 ( 以下は UTF-8 の場合 )
+        ```javascript
+        saveAs(
+            new Blob(
+                [str]
+                , {type: "text/plain;charset=utf-8"}
+            )
+            , "保存ファイル.txt"
+        );
+
+        ```
