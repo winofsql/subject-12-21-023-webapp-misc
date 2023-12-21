@@ -18,4 +18,30 @@
           ![image](https://github.com/winofsql/subject-231221/assets/1501327/64bf7cfc-c688-40d3-a179-3d9ee78e37c7)
         - [タイトル](https://getbootstrap.jp/docs/5.3/components/alerts/)\
           ![image](https://github.com/winofsql/subject-231221/assets/1501327/29f14559-eecc-47a9-a97b-1aa5ede9cd88)
-
+    - CSS
+      ```css
+      /* PC 用 */
+      @media screen and ( min-width:480px ) {
+      
+          input {
+              width: 400px;
+          }
+          textarea {
+              width: 500px;
+              height: 100px;
+          }
+      }
+      
+      /* スマホ 用 */
+      @media screen and ( max-width:479px ) {
+      
+          input,textarea {
+              width:100%;
+      
+          }
+      
+          textarea {
+              height: 70px;
+          }
+      }       
+      ```
