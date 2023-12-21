@@ -157,3 +157,30 @@
         
         formData.append("FILE_COUNT", file_cnt );
         ``` 
+
+  - ### JavaScript の基本テクニック
+    - ローカルのテキストファイルを読み込む
+      - var reader = new FileReader();
+        ```javascript
+        // ファイルオブジェクト
+        var file = $("#file").get(0).files[0];
+
+        // ファイルを読み込む為のオブジェクト
+        var reader = new FileReader();
+
+        // ファイルが読込み完了時に行う処理をイベントとして登録
+        reader.onload = function(reader_event) {
+            $("#text").val(reader_event.target.result);
+        };
+
+        // キャラクタセットに合わせてテキストとして読み込み
+        if ( encoding == "EUCJP" ) {
+            reader.readAsText(file, "euc-jp");
+        }
+        if ( encoding == "SJIS" ) {
+            reader.readAsText(file, "shift_jis");
+        }
+        if ( encoding == "UTF8" ) {
+            reader.readAsText(file);
+        }        
+        ```
